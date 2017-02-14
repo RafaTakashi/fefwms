@@ -1,0 +1,89 @@
+<header-directive>
+</header-directive>
+<section id="container">
+    <section id="main-content">
+        <section class="wrapper">
+            <div class="row">
+                <div class="col-lg-12 main-chart">
+                    <div class="container">
+                        <div class="row mtbox">
+                            
+                            <div class="col-md-2 col-sm-2">
+                                <div class="box1">
+                                    <span class="li_user"></span>
+                                    <h3>{{vm.pacients.length}} Pacientes</h3>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 col-sm-2">
+                                <div class="box1">
+                                    <span class="li_shop"></span>
+                                    <h3>{{vm.companies.length}} <br/>ONGs</h3>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 col-sm-2">
+                                <div class="box1">
+                                    <span style="width: 50px;height: 50px"><i class="fa fa-stethoscope fa-lg" aria-hidden="true"></i></span>
+                                    <h3>{{vm.consults}} Consultas</h3>
+                                </div>
+                            </div>
+
+                            <div class="col-md-2 col-sm-2 box0">
+                                <div class="box1">
+                                    <span class="li_heart"></span>
+                                    <h3>{{vm.rehabs}} Reabilitações</h3>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /row mt -->
+                    </div>
+                    <!-- /col-lg-9 END SECTION MIDDLE -->
+                </div>
+                <!--/row -->
+        </section>
+    </section>
+    <!--main content end-->
+</section>
+<script type="application/javascript">
+    $(document).ready(function () {
+        $("#date-popover").popover({
+            html: true,
+            trigger: "manual"
+        });
+        $("#date-popover").hide();
+        $("#date-popover").click(function (e) {
+            $(this).hide();
+        });
+
+        $("#my-calendar").zabuto_calendar({
+            action: function () {
+                return myDateFunction(this.id, false);
+            },
+            action_nav: function () {
+                return myNavFunction(this.id);
+            },
+            ajax: {
+                url: "show_data.php?action=1",
+                modal: true
+            },
+            legend: [{
+                type: "text",
+                label: "Special event",
+                badge: "00"
+            }, {
+                type: "block",
+                label: "Regular event",
+            }]
+        });
+    });
+
+
+    function myNavFunction(id) {
+        $("#date-popover").hide();
+        var nav = $("#" + id).data("navigation");
+        var to = $("#" + id).data("to");
+        console.log('nav ' + nav + ' to: ' + to.month + '/' + to.year);
+    }
+</script>

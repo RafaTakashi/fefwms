@@ -1,0 +1,33 @@
+{
+  "name": "FEF-WMS",
+  "version": "1.0.0",
+  "description": "FEF WMS",
+  "main": "server.js",
+  "scripts": {
+    "dev": "http-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Bruno Yamashita",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "1.5.6",
+    "angular-chart.js": "^1.1.1",
+    "angular-google-chart": "^0.1.0",
+    "angular-input-masks": "^2.5.0",
+    "angular-loading-bar": "^0.9.0",
+    "angular-route": "1.5.6",
+    "angular-toastr": "^1.7.0",
+    "bootstrap": "^3.3.6",
+    "chart.js": "^2.4.0",
+    "express": "^4.13.4",
+    "lodash": "^4.13.1",
+    "moment": "^2.13.0",
+    "ngstorage": "^0.3.10"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0"
+  }
+}

@@ -1,0 +1,134 @@
+<header-directive></header-directive>
+<section id="main-content">
+    <section class="wrapper">
+        <h3>Cadastro de Pacientes</h3>
+        <!-- BASIC FORM ELELEMNTS -->
+        <div class="row mt">
+            <div class="col-lg-12">
+                <div class="form-panel">
+                    <form class="form-horizontal style-form" method="get">
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">Nome</label>
+                            <div class="col-sm-10">
+                                <input type="text" ng-model="vm.pacient.name" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">RG</label>
+                            <div class="col-sm-10">
+                                <input type="text" ng-model="vm.pacient.rg" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">CPF</label>
+                            <div class="col-sm-10">
+                                <input type="text" ng-model="vm.pacient.cpf" class="form-control" ui-br-cpf-mask>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">Idade</label>
+                            <div class="col-sm-10">
+                                <input type="number" ng-model="vm.pacient.Idade" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">Tipo Sanguineo</label>
+                            <div class="col-sm-10">
+                                <select ng-model="vm.pacient.bloodType" class="form-control">
+                   <option>A+</option>
+                   <option>A-</option>
+                   <option>B+</option>
+                   <option>B-</option>
+                   <option>AB-</option>
+                   <option>AB+</option>
+                   <option>O+</option>
+                   <option>O-</option>
+                 </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">Tipo de Dependencia</label>
+                            <div class="col-sm-10">
+                                <input type="text" ng-model="vm.pacient.dependency" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">Rua</label>
+                            <div class="col-sm-10">
+                                <input type="text" ng-model="vm.pacient.address.street" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">Número</label>
+                            <div class="col-sm-10">
+                                <input type="text" ng-model="vm.pacient.address.number" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">Bairro</label>
+                            <div class="col-sm-10">
+                                <input type="text" ng-model="vm.pacient.address.neighborhood" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">CEP</label>
+                            <div class="col-sm-10">
+                                <input type="text" ng-model="vm.pacient.address.cep" class="form-control" ui-br-cep-mask>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">Cidade</label>
+                            <div class="col-sm-10">
+                                <input type="text" ng-model="vm.pacient.address.city" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 col-sm-2 control-label">Estado</label>
+                            <div class="col-sm-10">
+                                <select name="state" id="state" ng-model="vm.pacient.address.state" ng-options="uf as uf for uf in vm.ufs " class="form-control
+                 input-sm">
+                                    <option value="">Selecione uma UF...</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="action-buttons">
+                            <button class="btn btn-theme03 pull-right" ng-click="vm.Create()">Cadastrar</button>
+                            <button class="btn btn-theme04 left-right"  >Cancelar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- col-lg-12-->
+        </div>
+        <!-- /row -->
+    </section>
+    <!--/wrapper -->
+</section>
+</section>
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script class="include" type="text/javascript" src="assets/js/jquery.dcjqaccordion.2.7.js"></script>
+<script src="assets/js/jquery.scrollTo.min.js"></script>
+<script src="assets/js/jquery.nicescroll.js" type="text/javascript"></script>
+<!--common script for all pages-->
+<script src="assets/js/common-scripts.js"></script>
+<!--script for this page-->
+<script src="assets/js/jquery-ui-1.9.2.custom.min.js"></script>
+<!--custom switch-->
+<script src="assets/js/bootstrap-switch.js"></script>
+<!--custom tagsinput-->
+<script src="assets/js/jquery.tagsinput.js"></script>
+<!--custom checkbox & radio-->
+<script type="text/javascript" src="assets/js/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap-daterangepicker/date.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap-daterangepicker/daterangepicker.js"></script>
+<script type="text/javascript" src="assets/js/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+<script src="assets/js/form-component.js"></script>
+<script>
+    //custom select box
+
+    $(function () {
+        $('select.styled').customSelect();
+    });
+</script>

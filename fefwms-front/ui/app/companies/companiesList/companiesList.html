@@ -1,0 +1,52 @@
+<header-directive></header-directive>
+<section id="main-content">
+    <section class="wrapper">
+        <div class="row mt">
+            <div class="col-lg-12">
+                <div class="content-panel">
+                    <div class="div">
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <h4>Instituições cadastradas</h4>
+                            </div>
+                            <!--<div class="col-sm-">
+                                   <a href="#/pacients/new" class="pull-right"><i class="fa fa-plus" aria-hidden="true"></i>Novo Paciente</a>
+                            </div>-->
+                            <div class="col-sm-3">
+                                <p style="font-size: 18px;">
+                                    <i class="fa fa-search icon-ghost"></i><input ng-model="searchText" placeholder="Buscar por nome" type="text">
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <section id="unseen">
+                        <table class="table table-bordered table-striped table-condensed text-center">
+                            <thead>
+                                <tr>
+                                    <th class="text-center">Nome</th>
+                                    <th class=" text-center">Categoria</th>
+                                    <th class=" text-center">Estado</th>
+                                    <th class=" text-center">Telefone</th>
+                                    <th class=" text-center">Email</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!--ngrepeat-->
+                                <tr ng-repeat="company in vm.companies | filter: searchText">
+                                    <td><a ng-href="#/companies/{{company._id}}">{{company.name}}</a></td>
+                                    <td>{{company.category}}</td>
+                                    <td>{{company.address.state}}</td>
+                                    <td>{{company.phone}}</td>
+                                    <td>{{company.email}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
+                <!-- /content-panel -->
+            </div>
+            <!-- /col-lg-4 -->
+        </div>
+        <!-- /row -->
+    </section>
+</section>

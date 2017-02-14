@@ -1,0 +1,99 @@
+<header-directive></header-directive>
+<section id="main-content">
+    <style>
+        #doughnut {
+            height: 170px !important;
+            width: 180px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        #bar {
+            width: 240px !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .region-chart,
+        .chart-graph {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .chart-graph {
+            background-color: #fff;
+            height: 300px;
+            width: 320px;
+        }
+        
+        .pie-chart-colum {
+            flex-direction: column;
+        }
+        
+        footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+    <section class="wrapper">
+        <div class="row">
+
+            <div class="col-xs-12 col-md-6 col-sm-6 pie-chart-colum flex__center">
+                <h4 class="text-center">Indice de Reabilitados</h4>
+                <div class="chart-graph">
+                    <canvas id="bar" class="chart chart-bar" chart-data="badData" chart-labels="barLabels" chart-series="barSeries"> </canvas>
+
+                </div>
+                <h6>Legenda: Azul: Atendimentos, Cinza: Reabilitações</h6>
+            </div>
+
+            <div class="col-xs-12 col-md-6 col-sm-6 pie-chart-colum flex__center">
+                <h4 class="text-center">Analise de Dependentes</h4>
+                <div class="chart-graph">
+
+                    <canvas id="doughnut" class="chart chart-doughnut" chart-colors="chartColors" chart-data="donutData" chart-labels="donutLabels">
+                    </canvas>
+                </div>
+                <h6>Legenda: Azul: Homens, Vermelho: Mulheres</h6>
+            </div>
+
+            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-8 col-md-offset-2  flex__center">
+                <!--Mapa Brasil -->
+
+                <div class="region-chart">
+                    <h4 class="text-center">Analise por região</h4>
+                    <div google-chart chart="chartObject"></div>
+
+                    <!--<div class="centered">-->
+                    <h6>Legenda: 1: Maconha, 2: Alcool, 3: Crack, 4:Cocaina</h6>
+                    <!--</div>-->
+                </div>
+                <!-- Fim Mapa Brasil -->
+            </div>
+
+            
+
+
+            
+        </section>
+
+
+        <!-- /MAIN CONTENT -->
+        <!--main content end-->
+
+        <!--footer start-->
+
+    <!--<footer class="site-footer">
+        <div class="text-center">
+            2017 - Alvarez.is
+            <a href="responsive_table.html#" class="go-top">
+                <i class="fa fa-angle-up"></i>
+            </a>
+        </div>
+    </footer>-->
+    <!--footer end-->

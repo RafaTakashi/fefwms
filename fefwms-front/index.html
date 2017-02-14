@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <meta charset="utf-8" http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" type="image/png" href="ui/assets/img/favicon.ico">
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="scripts/angular-locale_pt-br.js"></script>
+    <script src="scripts/mask.min.js"></script>
+    <script src="scripts/ng-lodash.min.js"></script>
+    <script src="scripts/jquery-3.1.1.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="node_modules/ngstorage/ngStorage.min.js"></script>
+    <script src="node_modules/moment/moment.js"></script>
+    <script src="node_modules/moment/locale/pt-br.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/angular-google-chart/ng-google-chart.min.js"></script>
+    <script src="node_modules/chart.js/dist/Chart.min.js"></script>
+    <script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+    <script src="node_modules/angular-input-masks/releases/angular-input-masks-standalone.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="ui/assets/css/zabuto_calendar.css">
+    <link rel="stylesheet" type="text/css" href="ui/assets/js/gritter/css/jquery.gritter.css" />
+    <link rel="stylesheet" type="text/css" href="ui/assets/lineicons/style.css">
+    <script type="text/javascript" src="node_modules/angular-loading-bar/build/loading-bar.min.js"></script>
+    <script type="text/javascript" src="node_modules/angular-input-masks/releases/angular-input-masks-standalone.min.js"></script>    
+    <script type="text/javascript" src="node_modules/angular-toastr/dist/angular-toastr.tpls.js"></script>
+    <link rel="stylesheet" href="node_modules/angular-loading-bar/build/loading-bar.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" type="text/css" href="node_modules/angular-toastr/dist/angular-toastr.css"/>
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- New Booststrap-->
+    <link href="ui/assets/css/bootstrap.css" rel="stylesheet">
+    <link href="ui/assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="ui/assets/css/style.css" rel="stylesheet">
+    <link href="ui/assets/css/style-responsive.css" rel="stylesheet">
+    <!-- controllers -->
+    <script src="ui/app/app.js"></script>
+    <script src="ui/app/config.js"></script>
+    <script src="ui/app/globalConfig.js"></script>
+    <script src="ui/app/directives/header.directive.js"></script>
+    <script src="ui/app/login/loginController.js"></script>
+    <script src="ui/app/dashboard/dashboardController.js"></script>
+    <script src="ui/app/profile/profileController.js"></script>
+    <script src="ui/app/companies/companiesCreate/companiesCreateController.js"></script>
+    <script src="ui/app/companies/companiesDetails/companiesDetailsController.js"></script>
+    <script src="ui/app/companies/companiesList/companiesListController.js"></script>
+    <script src="ui/app/pacients/pacientsCreate/pacientsCreateController.js"></script>
+    <script src="ui/app/pacients/pacientsDetails/pacientsDetailsController.js"></script>
+    <script src="ui/app/pacients/pacientsList/pacientsListContoller.js"></script>
+    <script src="ui/app/ranking/rankingController.js"></script>
+    <script src="ui/app/reports/reportsController.js"></script>
+    <!-- services -->
+    <script src="ui/app/login/loginService.js"></script>
+    <script src="ui/app/dashboard/dashboardService.js"></script>
+    <script src="ui/app/companies/companiesService.js"></script>
+    <script src="ui/app/pacients/pacientsService.js"></script>
+    <script src="ui/app/profile/profileService.js"></script>
+    <script src="ui/app/ranking/rankingService.js"></script>
+    <title>FEF WMS</title>
+</head>
+
+<body>
+    <ng-view class="">
+    </ng-view>
+</body>
+
+</html>

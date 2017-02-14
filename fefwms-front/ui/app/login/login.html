@@ -1,0 +1,69 @@
+<div id="login-page">
+    <div class="container">
+        <form class="form-login" action="index.html">
+            <h2 class="form-login-heading">Acesso ao sistema</h2>
+            <div class="login-wrap">
+                <input type="text" ng-model="user.email" class="form-control" placeholder="Email" autofocus>
+                <br>
+                <input type="password" ng-model="user.password" class="form-control" placeholder="Senha">
+                <label class="checkbox flex_center area-de-login">
+      					<div class="checkbox">
+      						<label>
+      							<input type="checkbox"> Lembre-me
+      						</label>
+            </div>
+            <span class="pull-right">
+      						<a data-toggle="modal" href="login.html#myModal"> Esqueceu a senha</a>
+      					</span>
+            </label>
+            <a ng-click="login()" class="btn btn-theme btn-block" type="submit"><i class="fa fa-lock"></i> Entrar</a>
+            <button class="btn btn-theme btn-block" ng-click="register()" type="button"><i class="fa fa-note"></i>Registrar</button>
+    </div>
+    <!-- Modal -->
+    <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title">Esqueceu a Senha?</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Entre com o seu e-mail abaixo para recuperar a sua senha!</p>
+                    <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+                </div>
+                <div class="modal-footer">
+                    <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+                    <button class="btn btn-theme" type="button">Enviar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- modal -->
+    </form>
+
+    <div>
+        <figure class="img-logo">
+            <img src="../../../ui/assets/img/healthkeeper-lightgreen.png" alt="" width="400">
+        </figure>
+    </div>
+
+    <style>
+        .img-logo img{
+            position: absolute;
+            top: 30px;
+            right: 40px;
+        }
+    </style>
+</div>
+</div>
+<!-- js placed at the end of the document so the pages load faster -->
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<!--BACKSTRETCH-->
+<!-- You can use an image of whatever size. This script will stretch to fit in any screen size.-->
+<script type="text/javascript" src="assets/js/jquery.backstretch.min.js"></script>
+<script>
+    $.backstretch("assets/img/login-bg.jpg", {
+        speed: 500
+    });
+</script>
